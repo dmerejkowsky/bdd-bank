@@ -1,0 +1,32 @@
+1/ Setup
+
+2/ Basic steps
+
+class Account:
+    self.balance = 0
+
+3/ Oh no, history won't work
+
+class Account:
+    initial_deposit = Operation(date=datetime.now(), amount=balance)
+    self.operations = [initial_deposit]
+
+... but we need to make sure history lines are sorted:
+
+    @property
+    def history(self):
+        lines = []
+        balance = 0
+        # Remove this sort
+        for operation in sorted(self.operations, key=lambda x: x.date):
+            balance += operation.amount
+            line = HistoryLine(
+                amount=operation.amount, date=operation.date, balance=balance
+            )
+            lines.append(line)
+        return History(lines)
+
+4/
+
+Let's go full calisthenic!
+

@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "py-bdd"
+version = "0.1.0"
+description = "Playing around with pytest and BDD"
+authors = ["Dimitri Merejkowsky <dimitri@dmerej.info>"]
+license = "BSD"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest-bdd = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

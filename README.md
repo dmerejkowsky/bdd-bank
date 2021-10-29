@@ -6,6 +6,8 @@ Inspired by : https://github.com/iAmDorra/BankKata_and_cqrs
 
 Some notes:
 
+* I'm using `dataclass(frozen=True)` for Value Objects
+
 * Implementation is in `bank.py` with a few helpful comments
 
 * I'm using [pytest](https://pytest.org) and [pytest-

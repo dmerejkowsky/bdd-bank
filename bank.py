@@ -42,12 +42,12 @@ class HistoryLine:
     balance: int
 
 
-@dataclass
 class History:
-    lines: HistoryLine
+    def __init__(self):
+        self.lines = []
 
     def append_line(self, line):
-        insort(self.lines, line)
+        bisect.insort(self.lines, line)
 
     def as_text(self):
         res = ""
@@ -77,12 +77,12 @@ class Account:
 
     @property
     def history(self):
-        lines = []
+        res = History()
         balance = 0
         for operation in self.operations:
             balance += operation.amount
             line = HistoryLine(
                 amount=operation.amount, date=operation.date, balance=balance
             )
-            lines.append(line)
-        return History(lines)
+            res.append_line(line)
+        return res

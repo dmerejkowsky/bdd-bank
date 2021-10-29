@@ -2,6 +2,8 @@
 
 You'll find here my attempt at solving the bank kata.
 
+Inspired by : https://github.com/iAmDorra/BankKata_and_cqrs
+
 Some notes:
 
 * Implementation is in `bank.py` with a few helpful comments

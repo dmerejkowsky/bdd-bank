@@ -13,3 +13,12 @@ Some notes:
 * I tried to use only calisthenics objects
 
 * You can find a rough logs of the steps I took in `log.txt`
+
+## Running the tests
+
+Install [poetry](https://python-poetry.org/)
+
+```
+poetry install
+poetry run pytest
+```
